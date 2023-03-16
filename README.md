@@ -1,2 +1,15 @@
 # Miranda_Wang_20_440_Repository
 This is a simple repository containing the data and documentation to recreate one figure from my 20.440 final project
+
+## Overview
+The goal of our project is to use data from NASA studies to better understand the changes in endothelial cells and immune cells under microgravity conditions that lead to an increased risk for cardiovascular disease in astronauts. This repository contains the data and documentation to create a simple scatter plot of gene expression between human umbilical vein endothelial cells (HUVECs) cultured in microgravity (MG) or ground (control) conditions. The code provided in the CODE file will read and clean the provided gene expression data from HUVECs at microgravity and control conditions, calculate which genes are "up" or "down" regulated using a log2 fold change, and plot the expression with color of the datapoint representing up or downregulation. 
+
+## Data
+The data used in this repository is from the Gene Expression Omnibus with the accession number GSE80292 and can be found at https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE80292. The source data was collected from HUVECs cultured in microgravity or gravity(control) conditions by bulk RNA sequencing in the Illumina HiSeq2500 platform. The files used for this figure analysis were two excel files listing normalized FPKM data from the bulk sequencing of HUVECs in microgravity or control conditions. These files are included in the Data folder. The file entitled "GSM2123858_MG1-Human.GeneExpression" is the data for the microgravity condition and the file "GSM2123857_S1-Human.GeneExpression" is the data for the control condition. This data was generated and published in accordance with the paper:
+Kasiviswanathan, D., Chinnasamy Perumal, R., et al. "Interactome of miRNAs and transcriptome of human umbilical cord endothelial cells exposed to short-term simulated microgravity." NPJ Microgravity. 2020, Jul 30. doi: 10.1038/s41526-020-00108-6. PMID: 32821776. PMCID: PMC7393356.
+
+## Folder Structure
+There are three folders in this repository. The folder "Data" contains the files used from the Gene Expression Omnibus to create our figure. The folder "CODE" houses a python script used to generate our figure. The folder "FIGURES" holds a .png file of the generated gene expression scatterplot. 
+
+## Installation
+This repository contains the python script used to analyze the provided data and generate the included gene expression scatterplot. This script was generated in Google Colab and contains code to clean and merge the microgravity and control datasets, calculate log2 fold changes, and determine if genes are upregulated, downregulated, or unchanged between conditions. All code was written by Miranda Wang, and standard methods were used. We recommend using Google Colab to run this script and placing the data folder in your google drive for easy access. This script requires the installation of pandas (v1.4.4), numpy (v1.22.4), scipy (1.10.1), matplotlib (v3.2.2), and seaborn (v0.11.2).
